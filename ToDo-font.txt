@@ -1,0 +1,2 @@
+new update font (kitty + vim)
+fc-cache -fv && c-list | grep "FiraCode.*Mono" && kitty +list-fonts | grep FiraCode
