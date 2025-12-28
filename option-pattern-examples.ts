@@ -29,3 +29,7 @@ async const processUser = () => {
     console.log("Usuario não encontrado");
   }
 }
+
+//Versão utilizando Optional Chaining + Nullish
+const safeName = await getUser(999)?.name ?? "Usuario não encontrado"; 
+console.log(safeName);  // "Usuario não encontrado" 
