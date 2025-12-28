@@ -18,3 +18,14 @@ async function getUser(uid: number): Promise<User | null> {
   if (uid === 123) return Promise.resolve({ name: "João" });  // equivalente ao "Some" - Scala
   return Promise.resolve(null);                               // equivalente ao "None" - Scala
 }
+
+// Utilizando "Pattern Matching" (if/else ou switch)
+async const processUser = () => {
+  const result = await getUser(999);  // usuario inexistente possivel null
+
+  if (result) {                    // "Some" - 'pode' ter valor presente
+    console.log(`Usuario: ${result.name}`);
+  } else {                         // "None" - sem valor, evitando de usar Null, Sendo None um tipo em Scala
+    console.log("Usuario não encontrado");
+  }
+}
