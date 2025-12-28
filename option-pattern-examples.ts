@@ -32,4 +32,5 @@ async const processUser = () => {
 
 //Versão utilizando Optional Chaining + Nullish
 const safeName = await getUser(999)?.name ?? "Usuario não encontrado"; 
-console.log(safeName);  // "Usuario não encontrado" 
+console.log(safeName);  // "Usuario não encontrado"
+//Obs: TypeScript não tem 'Option' nativo como Scala, mas pode utilizar 'Promises' + 'optional chaining' evitar esses problemas de Null em runtime
